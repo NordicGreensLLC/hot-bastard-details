@@ -133,6 +133,9 @@
     .card p, .why p, .contact p { color: var(--paper); }
     .why { max-width: 40rem; }
     .why p { margin-bottom: .8rem; }
+    .odd-jobs p { max-width: 40rem; }
+    .phone-inline { font-weight: 800; text-decoration: none; }
+    .phone-inline:hover, .phone-inline:focus-visible, .odd-jobs a:hover, .odd-jobs a:focus-visible { color: var(--flame); }
     .phone {
       font-size: clamp(1.6rem, 4vw, 2.2rem);
       font-weight: 800;
@@ -222,6 +225,11 @@
         <h2 id="why-heading">Why Roger</h2>
         <p>Roger keeps the work simple. Two services, done in person, with a call or a text to get started.</p>
         <p>No runaround. If you need headlights restored or the interior vacuumed, reach out and set an appointment.</p>
+      </section>
+
+      <section class="odd-jobs" aria-labelledby="odd-jobs-heading">
+        <h2 id="odd-jobs-heading">Odd jobs</h2>
+        <p>Roger also takes odd jobs. <a href="tel:+14845449416">Just call and ask!</a> <a class="phone-inline" href="tel:+14845449416">(484) 544-9416</a></p>
       </section>
 
       <section class="contact" aria-labelledby="contact-heading">
