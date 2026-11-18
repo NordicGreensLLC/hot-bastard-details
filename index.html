@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hot Bastard Details</title>
+  <meta name="description" content="Headlight restoration and interior vacuuming by Roger. By appointment only.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --charcoal: #1c1917;
+      --ink: #2a2623;
+      --paper: #f4f0e8;
+      --flame: #ff4d1a;
+      --muted: #b9b0a4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--charcoal); color: var(--paper); }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1040px, calc(100% - 2.4rem)); margin: 0 auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.1rem 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      text-decoration: none;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: .82rem;
+    }
+    .brand svg { width: 28px; height: 28px; display: block; }
+    .header-actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.75rem;
+      padding: .7rem 1.15rem;
+      border: 2px solid var(--flame);
+      background: var(--flame);
+      color: var(--paper);
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: .8rem;
+    }
+    .btn.ghost {
+      background: transparent;
+      color: var(--paper);
+    }
+    .btn:hover, .btn:focus-visible { background: var(--paper); color: var(--charcoal); border-color: var(--paper); }
+    .btn.ghost:hover, .btn.ghost:focus-visible { background: var(--flame); color: var(--paper); border-color: var(--flame); }
+    hero, .hero { padding: 3.2rem 0 3.6rem; }
+    .hero h1 {
+      font-size: clamp(2.4rem, 8vw, 5.2rem);
+      line-height: .92;
+      letter-spacing: -.03em;
+      text-transform: uppercase;
+      max-width: 14ch;
+      margin: 1.2rem 0 1rem;
+    }
+    .hero h1 span { color: var(--flame); }
+    .tagline {
+      font-size: 1.15rem;
+      max-width: 34rem;
+      color: var(--paper);
+    }
+    .hours {
+      margin: 1rem 0 1.6rem;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .82rem;
+    }
+    .hero-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+    .logo-mark { width: 64px; height: 64px; }
+    section { padding: 0 0 3.6rem; }
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 1.2rem;
+    }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .card {
+      background: var(--ink);
+      padding: 1.3rem 1.3rem 1.4rem;
+      border: 2px solid #3a342f;
+    }
+    .card svg { width: 100%; height: auto; display: block; margin-bottom: 1rem; background: var(--charcoal); }
+    .card h3 { font-size: 1.2rem; text-transform: uppercase; margin-bottom: .25rem; }
+    .price {
+      color: var(--flame);
+      font-weight: 800;
+      font-size: 1.35rem;
+      margin-bottom: .6rem;
+    }
+    .card p, .why p, .contact p { color: var(--paper); }
+    .why { max-width: 40rem; }
+    .why p { margin-bottom: .8rem; }
+    .phone {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: .02em;
+      text-decoration: none;
+      display: inline-block;
+      margin: .4rem 0 1rem;
+    }
+    .phone:hover, .phone:focus-visible { color: var(--flame); }
+    footer {
+      border-top: 2px solid #3a342f;
+      padding: 1.2rem 0 2rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    @media (max-width: 720px) {
+      .cards { grid-template-columns: 1fr; }
+      header { align-items: flex-start; flex-direction: column; }
+      .hero { padding-top: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" fill="#1c1917"/>
+          <path fill="#ff4d1a" d="M32 4c0 0-16 21-16 34.5C16 49.8 22.8 58 32 58s16-8.2 16-19.5C48 25 32 4 32 4z"/>
+          <path fill="#f4f0e8" d="M32 24c0 0-8.4 12-8.4 18.4C23.6 48 27.2 51 32 51s8.4-3 8.4-8.6C40.4 36 32 24 32 24z"/>
+        </svg>
+        Hot Bastard Details
+      </a>
+      <div class="header-actions">
+        <a class="btn" href="tel:+14845449416">Call Roger</a>
+        <a class="btn ghost" href="sms:+14845449416">Text Roger</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path fill="#ff4d1a" d="M32 4c0 0-16 21-16 34.5C16 49.8 22.8 58 32 58s16-8.2 16-19.5C48 25 32 4 32 4z"/>
+          <path fill="#f4f0e8" d="M32 24c0 0-8.4 12-8.4 18.4C23.6 48 27.2 51 32 51s8.4-3 8.4-8.6C40.4 36 32 24 32 24z"/>
+        </svg>
+        <h1>Hot Bastard <span>Details</span></h1>
+        <p class="tagline">Headlight restoration and interior vacuuming, handled by Roger.</p>
+        <p class="hours">By appointment only</p>
+        <div class="hero-actions">
+          <a class="btn" href="tel:+14845449416">Call Roger</a>
+          <a class="btn ghost" href="sms:+14845449416">Text Roger</a>
+        </div>
+      </section>
+
+      <section aria-labelledby="services-heading">
+        <h2 id="services-heading">Services</h2>
+        <div class="cards">
+          <article class="card">
+            <svg viewBox="0 0 320 160" role="img" aria-label="Cloudy headlight next to a cleared headlight">
+              <rect width="320" height="160" fill="#1c1917"/>
+              <text x="46" y="28" fill="#b9b0a4" font-size="12" font-family="Segoe UI, Arial, sans-serif" font-weight="700">BEFORE</text>
+              <text x="206" y="28" fill="#b9b0a4" font-size="12" font-family="Segoe UI, Arial, sans-serif" font-weight="700">AFTER</text>
+              <rect x="20" y="44" width="132" height="90" fill="#2a2623"/>
+              <ellipse cx="86" cy="89" rx="46" ry="30" fill="#c4a15a"/>
+              <ellipse cx="86" cy="89" rx="28" ry="16" fill="#8a7040"/>
+              <rect x="70" y="128" width="32" height="8" fill="#3a342f"/>
+              <rect x="168" y="44" width="132" height="90" fill="#2a2623"/>
+              <ellipse cx="234" cy="89" rx="46" ry="30" fill="#f4f0e8"/>
+              <ellipse cx="234" cy="89" rx="28" ry="16" fill="#b9b0a4"/>
+              <rect x="218" y="70" width="14" height="10" fill="#ffffff"/>
+              <rect x="218" y="128" width="32" height="8" fill="#3a342f"/>
+            </svg>
+            <h3>Headlight Restoration</h3>
+            <p class="price">$100</p>
+            <p>Yellowed or hazy headlights get cleaned up and cleared so they look better and throw more light.</p>
+          </article>
+          <article class="card">
+            <svg viewBox="0 0 320 160" role="img" aria-label="Car seat with a vacuum wand">
+              <rect width="320" height="160" fill="#1c1917"/>
+              <rect x="48" y="36" width="110" height="70" fill="#2a2623"/>
+              <rect x="48" y="100" width="150" height="36" fill="#3a342f"/>
+              <rect x="48" y="28" width="110" height="16" fill="#3a342f"/>
+              <rect x="188" y="92" width="84" height="14" fill="#b9b0a4"/>
+              <rect x="256" y="48" width="16" height="58" fill="#b9b0a4"/>
+              <rect x="248" y="36" width="32" height="18" fill="#ff4d1a"/>
+              <rect x="150" y="108" width="46" height="10" fill="#f4f0e8"/>
+            </svg>
+            <h3>Interior Vacuuming</h3>
+            <p class="price">$100</p>
+            <p>A thorough vacuum of the cabin — seats, carpets, and the spots that collect dust and debris.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="why" aria-labelledby="why-heading">
+        <h2 id="why-heading">Why Roger</h2>
+        <p>Roger keeps the work simple. Two services, done in person, with a call or a text to get started.</p>
+        <p>No runaround. If you need headlights restored or the interior vacuumed, reach out and set an appointment.</p>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Get in touch</h2>
+        <p>Call or text Roger to book. Hours are by appointment only.</p>
+        <a class="phone" href="tel:+14845449416">(484) 544-9416</a>
+        <div class="hero-actions">
+          <a class="btn" href="tel:+14845449416">Call Roger</a>
+          <a class="btn ghost" href="sms:+14845449416">Text Roger</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Hot Bastard Details</p>
+    </footer>
+  </div>
+</body>
+</html>
