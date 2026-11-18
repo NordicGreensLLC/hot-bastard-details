@@ -102,6 +102,23 @@
       border: 2px solid #3a342f;
     }
     .card svg { width: 100%; height: auto; display: block; margin-bottom: 1rem; background: var(--charcoal); }
+    .shot { position: relative; margin-bottom: 1rem; }
+    .shot img { width: 100%; height: auto; display: block; }
+    .shot span {
+      position: absolute;
+      left: .6rem;
+      top: .6rem;
+      background: var(--charcoal);
+      color: var(--paper);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .25rem .45rem;
+    }
+    @media (max-width: 720px) {
+      .photo-pair { display: grid; gap: .6rem; }
+    }
     .card h3 { font-size: 1.2rem; text-transform: uppercase; margin-bottom: .25rem; }
     .price {
       color: var(--flame);
@@ -170,20 +187,12 @@
         <h2 id="services-heading">Services</h2>
         <div class="cards">
           <article class="card">
-            <svg viewBox="0 0 320 160" role="img" aria-label="Cloudy headlight next to a cleared headlight">
-              <rect width="320" height="160" fill="#1c1917"/>
-              <text x="46" y="28" fill="#b9b0a4" font-size="12" font-family="Segoe UI, Arial, sans-serif" font-weight="700">BEFORE</text>
-              <text x="206" y="28" fill="#b9b0a4" font-size="12" font-family="Segoe UI, Arial, sans-serif" font-weight="700">AFTER</text>
-              <rect x="20" y="44" width="132" height="90" fill="#2a2623"/>
-              <ellipse cx="86" cy="89" rx="46" ry="30" fill="#c4a15a"/>
-              <ellipse cx="86" cy="89" rx="28" ry="16" fill="#8a7040"/>
-              <rect x="70" y="128" width="32" height="8" fill="#3a342f"/>
-              <rect x="168" y="44" width="132" height="90" fill="#2a2623"/>
-              <ellipse cx="234" cy="89" rx="46" ry="30" fill="#f4f0e8"/>
-              <ellipse cx="234" cy="89" rx="28" ry="16" fill="#b9b0a4"/>
-              <rect x="218" y="70" width="14" height="10" fill="#ffffff"/>
-              <rect x="218" y="128" width="32" height="8" fill="#3a342f"/>
-            </svg>
+            <div class="photo-pair">
+              <div class="shot">
+                <img src="img/headlight-before.jpg" width="1152" height="864" alt="Hazy, yellowed headlight on a silver car before restoration" loading="lazy">
+                <span>Before</span>
+              </div>
+            </div>
             <h3>Headlight Restoration</h3>
             <p class="price">$100</p>
             <p>Yellowed or hazy headlights get cleaned up and cleared so they look better and throw more light.</p>
