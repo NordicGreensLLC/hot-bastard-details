@@ -63,7 +63,7 @@
     }
     .btn:hover, .btn:focus-visible { background: var(--paper); color: var(--charcoal); border-color: var(--paper); }
     .btn.ghost:hover, .btn.ghost:focus-visible { background: var(--flame); color: var(--paper); border-color: var(--flame); }
-    hero, .hero { padding: 3.2rem 0 3.6rem; }
+    .hero { padding: 3.2rem 0 3.6rem; }
     .hero h1 {
       font-size: clamp(2.4rem, 8vw, 5.2rem);
       line-height: .92;
@@ -95,18 +95,23 @@
       letter-spacing: .04em;
       margin-bottom: 1.2rem;
     }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cards { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
     .card {
       background: var(--ink);
       padding: 1.3rem 1.3rem 1.4rem;
       border: 2px solid #3a342f;
     }
-    .card svg { width: 100%; height: auto; display: block; margin-bottom: 1rem; background: var(--charcoal); }
-    .shot { position: relative; margin-bottom: 1rem; }
-    .shot img { width: 100%; height: auto; display: block; }
-    .shot span {
+    .photo-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .6rem;
+      margin-bottom: 1rem;
+    }
+    .shot, .split { position: relative; }
+    .split { margin-bottom: 1rem; }
+    .shot img, .split img { width: 100%; height: auto; display: block; }
+    .label {
       position: absolute;
-      left: .6rem;
       top: .6rem;
       background: var(--charcoal);
       color: var(--paper);
@@ -116,9 +121,8 @@
       text-transform: uppercase;
       padding: .25rem .45rem;
     }
-    @media (max-width: 720px) {
-      .photo-pair { display: grid; gap: .6rem; }
-    }
+    .label-left { left: .6rem; }
+    .label-right { left: calc(50% + .6rem); }
     .card h3 { font-size: 1.2rem; text-transform: uppercase; margin-bottom: .25rem; }
     .price {
       color: var(--flame);
@@ -145,7 +149,7 @@
       font-size: .9rem;
     }
     @media (max-width: 720px) {
-      .cards { grid-template-columns: 1fr; }
+      .photo-pair { grid-template-columns: 1fr; }
       header { align-items: flex-start; flex-direction: column; }
       .hero { padding-top: 1.6rem; }
     }
@@ -190,7 +194,11 @@
             <div class="photo-pair">
               <div class="shot">
                 <img src="img/headlight-before.jpg" width="1152" height="864" alt="Hazy, yellowed headlight on a silver car before restoration" loading="lazy">
-                <span>Before</span>
+                <span class="label label-left">Before</span>
+              </div>
+              <div class="shot">
+                <img src="img/headlight-after.jpg" width="1152" height="864" alt="The same silver car headlight after restoration, clear and nearly new-looking" loading="lazy">
+                <span class="label label-left">After</span>
               </div>
             </div>
             <h3>Headlight Restoration</h3>
@@ -198,16 +206,11 @@
             <p>Yellowed or hazy headlights get cleaned up and cleared so they look better and throw more light.</p>
           </article>
           <article class="card">
-            <svg viewBox="0 0 320 160" role="img" aria-label="Car seat with a vacuum wand">
-              <rect width="320" height="160" fill="#1c1917"/>
-              <rect x="48" y="36" width="110" height="70" fill="#2a2623"/>
-              <rect x="48" y="100" width="150" height="36" fill="#3a342f"/>
-              <rect x="48" y="28" width="110" height="16" fill="#3a342f"/>
-              <rect x="188" y="92" width="84" height="14" fill="#b9b0a4"/>
-              <rect x="256" y="48" width="16" height="58" fill="#b9b0a4"/>
-              <rect x="248" y="36" width="32" height="18" fill="#ff4d1a"/>
-              <rect x="150" y="108" width="46" height="10" fill="#f4f0e8"/>
-            </svg>
+            <div class="split">
+              <img src="img/interior-before-after.jpg" width="1200" height="675" alt="Car back seat split down the middle: left side covered in hair, crumbs, and wrappers; right side vacuumed with a stain still visible" loading="lazy">
+              <span class="label label-left">Before</span>
+              <span class="label label-right">After</span>
+            </div>
             <h3>Interior Vacuuming</h3>
             <p class="price">$100</p>
             <p>A thorough vacuum of the cabin — seats, carpets, and the spots that collect dust and debris.</p>
